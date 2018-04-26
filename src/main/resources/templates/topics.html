@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>A list of topics</title>
+</head>
+
+<body>
+	<header>
+		<h1>A List of Topics</h1>
+	</header>
+
+	<div th:each="topic: ${topics}">
+		<h2>
+			<a th:href="@{/topic(id=${topic.id})}" th:text="${topic.name}"></a>
+		</h2>
+	</div>
+
+</body>
+</html>
